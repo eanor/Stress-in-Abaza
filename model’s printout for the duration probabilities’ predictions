@@ -1,0 +1,47 @@
+Family: bernoulli 
+##   Links: mu = logit 
+## Formula: stressed ~ duration * vowel_n + (1 | speaker) + (vowel_n + 1 | minimal_pair/utterance) 
+##    Data: . (Number of observations: 3398) 
+##   Draws: 4 chains, each with iter = 2000; warmup = 1000; thin = 1;
+##          total post-warmup draws = 4000
+## 
+## Group-Level Effects: 
+## ~minimal_pair (Number of levels: 40) 
+##                                  Estimate Est.Error l-95% CI u-95% CI Rhat
+## sd(Intercept)                        1.30      0.19     0.99     1.72 1.00
+## sd(vowel_n2.syllable)                1.21      0.20     0.86     1.63 1.00
+## cor(Intercept,vowel_n2.syllable)    -0.98      0.02    -1.00    -0.93 1.00
+##                                  Bulk_ESS Tail_ESS
+## sd(Intercept)                         857     1536
+## sd(vowel_n2.syllable)                1007     1823
+## cor(Intercept,vowel_n2.syllable)     1296     1624
+## 
+## ~minimal_pair:utterance (Number of levels: 160) 
+##                                  Estimate Est.Error l-95% CI u-95% CI Rhat
+## sd(Intercept)                        0.35      0.12     0.09     0.57 1.01
+## sd(vowel_n2.syllable)                0.14      0.11     0.00     0.40 1.00
+## cor(Intercept,vowel_n2.syllable)     0.18      0.55    -0.90     0.96 1.00
+##                                  Bulk_ESS Tail_ESS
+## sd(Intercept)                         710      616
+## sd(vowel_n2.syllable)                 760     1115
+## cor(Intercept,vowel_n2.syllable)     2379     2051
+## 
+## ~speaker (Number of levels: 6) 
+##               Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## sd(Intercept)     1.57      0.56     0.85     3.01 1.00     1438     2136
+## 
+## Population-Level Effects: 
+##                            Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS
+## Intercept                     -8.64      0.77   -10.17    -7.15 1.00      897
+## duration                       0.06      0.00     0.05     0.06 1.00     2906
+## vowel_n2.syllable              1.33      0.47     0.42     2.23 1.00     1913
+## duration:vowel_n2.syllable    -0.02      0.00    -0.03    -0.01 1.00     2952
+##                            Tail_ESS
+## Intercept                      1729
+## duration                       3207
+## vowel_n2.syllable              2272
+## duration:vowel_n2.syllable     2871
+## 
+## Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
+## and Tail_ESS are effective sample size measures, and Rhat is the potential
+## scale reduction factor on split chains (at convergence, Rhat = 1).
